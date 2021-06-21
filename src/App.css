@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.boton-style{
+  color: orange;
+  background-color: black;
+  border-radius: 80%;
+  margin-left: 1rem;
+}
+.boton-add-style{
+  color: orange;
+  background-color: black;
+  margin-left: 1.5rem;
+}
