@@ -1,16 +1,17 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
-import ItemList from './components/ItemListContainer';
 import ItemCount from './components/itemCount';
+import ContainerFunction from './components/ItemListContainer'
 
 
 function App() {
   return (
     <div>
         <NavBar/>
-        <ItemList/>
+        <ContainerFunction/>
         <ItemCount initial={1} stock={10} onAdd={() => console.log('agregado')}/>
+        
     
     </div>
     
