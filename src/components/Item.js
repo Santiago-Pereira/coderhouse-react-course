@@ -1,6 +1,6 @@
 import React from "react";
 import {CardGroup, Card} from 'react-bootstrap';
-import container from './ItemListContainer';
+
 
 
 function Item({id, title, description, price, image}) {
