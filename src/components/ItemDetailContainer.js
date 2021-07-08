@@ -1,6 +1,6 @@
 
 import React, {useEffect, useState} from 'react';
-import Details from './ItemDetail';
+import ItemDetail from './ItemDetail';
 
 
 const productDetail = {
@@ -10,7 +10,7 @@ const productDetail = {
  description: 'ksjfkshfhsdjhfjds sfjhsjfhjsd ksnfjkhsjfhs'
 }
 
-function ItemDetails() {
+function ItemDetailContainer() {
  const [ProductDetails, setProductDetails] = useState({})
 
 
@@ -21,9 +21,9 @@ useEffect(() => {
 }, [])
 
 return(
-<div> <Details ProductDetails={ProductDetails}/> </div>
+<div> <ItemDetail ProductDetails={ProductDetails}/> </div>
 )
 
 }
 
-export default ItemDetails;
+export default ItemDetailContainer;

@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 
 
-function Details({ProductDetails}) {
+function ItemDetail({ProductDetails}) {
  console.log(ProductDetails, 'ProductDetails');
  return(
    <Card style={{ width: '18rem' }}>
@@ -19,4 +19,4 @@ function Details({ProductDetails}) {
   )
 
 }
-export default Details;
+export default ItemDetail;

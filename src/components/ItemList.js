@@ -6,7 +6,7 @@ import Item from "./Item";
 
 
 function ItemList({muebles}) {
- console.log(muebles, 'muebleeeees');
+ console.log(muebles, 'muebles');
  return(
   <Container>
     <Row>
