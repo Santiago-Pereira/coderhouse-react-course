@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import ItemCount from './itemCount';
 
 
 
@@ -13,7 +14,8 @@ function ItemDetail({ProductDetails}) {
      <Card.Text>
      {ProductDetails.description}
      </Card.Text>
-     camera price: $ {ProductDetails.price}
+      price: $ {ProductDetails.price}
+     <ItemCount initial={1} stock={10} onAdd={() => console.log('agregado')}/>
    </Card.Body>
   </Card>
   )
