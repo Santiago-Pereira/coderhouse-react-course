@@ -6,11 +6,16 @@ import ItemCount from './components/itemCount';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemDetail from './components/ItemDetail';
+import { ContextProvider } from "./components/Context";
+import Cart from "./components/Cart";
 
 
 
 function App() {
+
+  
   return (
+    <ContextProvider>
     <Router>
         <NavBar/>
 
@@ -29,17 +34,21 @@ function App() {
          </Route>
        
         <Route path='/pages/productId'>
-             <ItemDetail/>
+            
+            
+
         </Route>
 
 
-        <Route path='/pages/Home'>
-             <ItemCount initial={1} stock={10} onAdd={() => console.log('agregado')}/>
-        </Route>
+        <Route exact path='/Cart'> 
+            <Cart/>
+         </Route>
 
       </Switch>
 
      </Router>
+
+     </ContextProvider>
 
   );
 }

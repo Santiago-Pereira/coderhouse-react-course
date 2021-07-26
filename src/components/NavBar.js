@@ -22,7 +22,7 @@ function NavBar() {
       </NavDropdown>
     </Nav>
     <Nav>
-      <Nav.Link className="shoppingCart" to="#"><CartWidget /></Nav.Link>
+    <Nav.Link ><Link to="/Cart"><CartWidget /> </Link></Nav.Link>
     </Nav>
   </Navbar.Collapse>
 </Navbar>
