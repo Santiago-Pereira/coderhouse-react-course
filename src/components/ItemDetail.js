@@ -7,23 +7,23 @@ import { Link } from 'react-router-dom';
 
 
 
-function ItemDetail({ProductDetails}) {
+function ItemDetail({items}) {
   const {addItem} = useContext(cartContext);
-  const [state, setState] = useState(false)
+  const [state, setState] = useState(false);
   
   function onAdd(quantityToAdd){
         setState(true)
-        addItem(ProductDetails, quantityToAdd)
+        addItem(items, quantityToAdd)
     }
  return(
    <Card style={{ width: '18rem' }}>
-   <Card.Img variant="top" src={ProductDetails.image} />
+   
    <Card.Body>
-     <Card.Title>{ProductDetails.name}</Card.Title>
+     <Card.Title>{items.title}</Card.Title>
      <Card.Text>
-     {ProductDetails.description}
+     {items.description}
      </Card.Text>
-      price: $ {ProductDetails.price}
+      price: $ {items.price}
       {state === false ?  <ItemCount initial={1} stock={10} onAdd={onAdd}/> :  <Link to='/Cart'><button onClick={() => setState(false)}>terminar mi compra</button></Link>}
    </Card.Body>
   </Card>

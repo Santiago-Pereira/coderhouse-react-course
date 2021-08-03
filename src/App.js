@@ -8,11 +8,34 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemDetail from './components/ItemDetail';
 import { ContextProvider } from "./components/Context";
 import Cart from "./components/Cart";
+import {getFirestore} from './firebase';
+import { useState, useEffect } from 'react';
 
 
 
 function App() {
+  /*  const [loading, setLoading] = useState(false)
+   const [muebles, setMuebles] = useState([]) */
+  /*  const producto =  {title: 'sillas 8', description:'sdfdsfsd', price:57, category:'chairs'}  */
+ 
 
+  /*  useEffect(() => {
+      setLoading(true);
+      const db = getFirestore()
+      const itemCollection = db.collection("muebles")
+      itemCollection.add(producto).then((querySnapshot) =>{
+         if(querySnapshot.size === 0){
+            console.log('no results');
+         }else {
+            setMuebles(querySnapshot.docs.map(doc => doc.data()))
+         }
+      }).catch(error => {
+         console.log('error', error);
+      }).finally(() => {
+         setLoading(false);
+      })
+   }, []);
+   console.log('ssssssss', muebles); */
   
   return (
     <ContextProvider>

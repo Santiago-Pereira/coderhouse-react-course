@@ -1,0 +1,24 @@
+{"productos":
+[{"title": "mesa", "description":"mesa ideal para comedor", "price":40, "image": "https://picsum.photos/200", "category":"tables"},
+ {"title": "mesa", "description":"mesa ideal para comedor", "price":45, "image": "https://picsum.photos/200", "category":"tables"},  
+ {"title": "mesa", "description":"mesa ideal para comedor", "price":40, "image": "https://picsum.photos/200", "category":"tables"},
+ {"title": "mesa", "description":"mesa ideal para comedor", "price":40, "image": "https://picsum.photos/200", "category":"tables"},
+ {"title": "mesa", "description":"mesa ideal para comedor", "price":44, "image": "https://picsum.photos/200", "category":"tables"},
+ {"title": "mesa", "description":"mesa ideal para comedor", "price":49, "image": "https://picsum.photos/200", "category":"tables"},
+ {"title": "mesa", "description":"mesa ideal para comedor", "price":50, "image": "https://picsum.photos/200", "category":"tables"},
+ {"title": "mesa", "description":"mesa ideal para comedor", "price":100, "image": "https://picsum.photos/200", "category":"tables"},
+ {"title": "mesa", "description":"mesa ideal para comedor", "price":88, "image": "https://picsum.photos/200", "category":"tables"},
+ {"title": "mesa", "description":"mesa ideal para comedor", "price":79, "image": "https://picsum.photos/200", "category":"tables"},
+ {"title": "silla", "description":"silla de primera calidad", "price":20, "image": "https://picsum.photos/200", "category":"chairs"},
+ {"title": "silla", "description":"silla de primera calidad", "price":25, "image": "https://picsum.photos/200", "category":"chairs"},
+ {"title": "silla", "description":"silla de primera calidad", "price":23, "image": "https://picsum.photos/200", "category":"chairs"},
+ {"title": "silla", "description":"silla de primera calidad", "price":24, "image": "https://picsum.photos/200", "category":"chairs"},
+ {"title": "silla", "description":"silla de primera calidad", "price":29, "image": "https://picsum.photos/200", "category":"chairs"},
+ {"title": "silla", "description":"silla de primera calidad", "price":27, "image": "https://picsum.photos/200", "category":"chairs"},
+ {"title": "silla", "description":"silla de primera calidad", "price":20, "image": "https://picsum.photos/200", "category":"chairs"},
+ {"title": "silla", "description":"silla de primera calidad", "price":20, "image": "https://picsum.photos/200", "category":"chairs"},
+ {"title": "silla", "description":"silla de primera calidad", "price":20, "image": "https://picsum.photos/200", "category":"chairs"},
+ {"title": "silla", "description":"silla de primera calidad", "price":22, "image": "https://picsum.photos/200", "category":"chairs"}
+
+]
+}
