@@ -3,7 +3,7 @@ import {FaShoppingCart} from 'react-icons/fa';
 import React, { useContext} from 'react';
 import { cartContext } from "./Context";
 
-function CartWidget(greeting) {
+function CartWidget() {
   const {cart} = useContext(cartContext);
   return(
     <div>

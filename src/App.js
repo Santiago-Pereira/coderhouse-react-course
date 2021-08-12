@@ -10,6 +10,7 @@ import { ContextProvider } from "./components/Context";
 import Cart from "./components/Cart";
 import {getFirestore} from './firebase';
 import { useState, useEffect } from 'react';
+import CashOut from './components/CashOut';
 
 
 
@@ -58,13 +59,15 @@ function App() {
        
         <Route path='/pages/productId'>
             
-            
-
         </Route>
 
 
         <Route exact path='/Cart'> 
             <Cart/>
+         </Route>
+
+         <Route exact path='/CashOut'> 
+            <CashOut/>
          </Route>
 
       </Switch>

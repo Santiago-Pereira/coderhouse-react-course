@@ -48,64 +48,13 @@ import {getFirestore} from '../firebase';
         .catch((error) => console.log('Firestore error:', error));
     }, [category]);
  
-    /* useEffect(() => {
-       setLoading(true);
-       const db = getFirestore()
-       const itemCollection = db.collection("muebles");
-       const categoryCollection = itemCollection.where('category', '==', `${category}`);
-       categoryCollection.get().then((querySnapshot) =>{
-          if(querySnapshot.size === 0){
-             console.log('no results');
-          }else {
-            setMuebles(querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data()})))
-          }
-       }).catch(error => {
-          console.log('error', error);
-       }).finally(() => {
-          setLoading(false);
-       })
-    }, [category]);
-
-    useEffect(() => {
-      setLoading(true);
-      const db = getFirestore()
-      const itemCollection = db.collection("muebles").orderBy('price', 'asc');
-      itemCollection.get().then((querySnapshot) =>{
-         if(querySnapshot.size === 0){
-            console.log('no results');
-         }else {
-          setMuebles(querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data()})))
-         }
-      }).catch(error => {
-         console.log('error', error);
-      }).finally(() => {
-         setLoading(false);
-      })
-   }, []); */
+   
     return(
       <div><ItemList muebles={muebles}/></div>
     )
     console.log('ssssssss', muebles);
 
- /*  const [muebles, setMuebles] = useState([])
-  const {category} = useParams();
-
-useEffect(() => {
-  new Promise ((resolve, reject) => {
-    setTimeout(resolve(productos),3000)
-  }).then(
-    function (productosResolve) {
-      const productosFiltrados = productosResolve.filter(e => e.category === category)
-      !category ? setMuebles(productosResolve) :  setMuebles(productosFiltrados) 
-        
-      
-      
-    }
-  )
-},[category])
-  return(
-    <div><ItemList muebles={muebles}/></div>
-  ) */
+ 
 }
 
 export default ItemListContainer;

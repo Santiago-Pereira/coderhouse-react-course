@@ -11,14 +11,13 @@ function ItemDetailContainer() {
     const [items, setItems] = useState({})  // Le cambié [] por {}
     const [loading, setLoading] = useState(false);
     const {id} = useParams();
-
       useEffect(() => {
         const db = getFirestore()
       
         const itemCollection = db.collection("muebles");
         const item = itemCollection.doc(id);
         item.get().then((doc) => {
-            if (doc.exists){  // Le saqué el signo de exclamación
+            if (!doc.exists){  // Le saqué el signo de exclamación
                 console.log('Este producto no existe');
                 return;
             }

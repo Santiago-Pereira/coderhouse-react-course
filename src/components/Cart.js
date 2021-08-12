@@ -27,6 +27,7 @@ export default function Cart() {
     })}
     <p>Total price: ${totalPrice}</p>
     <button onClick={() => clear()}>elimina todos los productos del carro</button>
+    <Link to="CashOut"> <button> Ir a la seccion de confirmar compra </button> </Link>
    </div>
   )
  
