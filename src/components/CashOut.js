@@ -1,5 +1,5 @@
-import React, { useState, useContext, useEffect, useParams } from 'react';
-import {Form, Button} from 'react-bootstrap';
+import React, { useState, useContext } from 'react';
+import {Form, Button, Col} from 'react-bootstrap';
 import firebase from "firebase/app";
 import 'firebase/firestore';
 import {getFirestore} from '../firebase';
@@ -31,7 +31,9 @@ const CashOut = () => {
    e.preventDefault();
    setLoading(true);
   orders.add(newOrder).then(({id}) =>{
+   
    setOrderId(id);
+   alert('Gracias por elegirnos! \n Su numero de orden es:')
    clear(cart); 
   }).catch(err => {
    setError(err);
@@ -42,6 +44,7 @@ const CashOut = () => {
   
   return (
   <Form onSubmit={handleSubmit}>
+    <Col className="col-12 col-sm-12 col-md-6 col-lg-6">
   <Form.Group className="mb-2" controlId="formBasicName">
     <Form.Label>Name</Form.Label>
     <Form.Control type="name" value={name} placeholder="Enter your complete Name..." required onChange={(e) => setName(e.target.value)}  />
@@ -62,9 +65,8 @@ const CashOut = () => {
     <Form.Control type="phone" value={phone} placeholder="Enter your number here..." required onChange={(e) => setPhone(e.target.value)} />
   </Form.Group>
 
-
   <Button variant="success" type="submit">Submit</Button>
-  
+  </Col>
  </Form>
   )
 

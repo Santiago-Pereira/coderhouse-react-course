@@ -52,7 +52,7 @@ import {getFirestore} from '../firebase';
     return(
       <div><ItemList muebles={muebles}/></div>
     )
-    console.log('ssssssss', muebles);
+    
 
  
 }

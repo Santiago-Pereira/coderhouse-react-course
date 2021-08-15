@@ -1,6 +1,8 @@
 import React, { useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { cartContext } from "./Context";
+import { Card, Button, Container, Row, Col } from 'react-bootstrap';
+
 
 export default function Cart() {
  const {clear, cart, removeItem} = useContext(cartContext);
@@ -18,16 +20,44 @@ export default function Cart() {
    <div>
     {cart.map(element => {
      return(
-      <div>
-       <h1>{element.Item.title} (Quantity: {element.quantity})</h1>
-       <h2>{(element.Item.price * element.quantity)}</h2>
-       <button onClick={() => removeItem(element.Item.id)}>eliminar item del carro</button>
-      </div>
+      <Container>
+        <Row className="no-gutters">
+          <Col className="col-5 col-sm-5 col-md-4 col-lg-2">
+        <Card className="card-left">
+        <Card.Img variant="top" src={element.Item.image} className="left" />
+        <Card.Body>
+          <Card.Title className='text-center'>{element.Item.title}</Card.Title>
+          <Card.Text className='text-center'>(Quantity: {element.quantity})</Card.Text>
+          <div className='card-price text-center'>Price: ${(element.Item.price * element.quantity)}</div>
+        <Button variant="danger" onClick={() => removeItem(element.Item.id)}>eliminar item del carro</Button>
+        </Card.Body>
+        </Card>
+        </Col>
+        </Row>
+        </Container>
+
      )
     })}
-    <p>Total price: ${totalPrice}</p>
-    <button onClick={() => clear()}>elimina todos los productos del carro</button>
-    <Link to="CashOut"> <button> Ir a la seccion de confirmar compra </button> </Link>
+   
+    
+    <Card>
+    <Row>
+      <Card.Body>
+      <Col className="col-12 col-sm-12 col-md-12 col-lg-12">
+        <Card.Title className="text-center">Total price: ${totalPrice} </Card.Title>
+        </Col>
+        <Col className="col-12 col-sm-12 col-md-12 col-lg-12">
+           <Card.Text className='text-center'><Link to="CashOut"> <Button className="btn-success"> Ir a la seccion de confirmar compra </Button > </Link></Card.Text>
+           </Col>
+       <Col className="col-12 col-sm-12 col-md-12 col-lg-12">
+           <Card.Text className='text-center'>  <Button className="btn-danger" onClick={() => clear()}>elimina todos los productos del carro</Button> </Card.Text>
+           </Col>
+      </Card.Body>
+      </Row>
+    </Card>
+    
+    
+    
    </div>
   )
  

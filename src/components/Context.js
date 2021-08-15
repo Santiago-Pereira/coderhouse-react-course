@@ -3,7 +3,7 @@ import { createContext, useState, useEffect } from "react";
 
 export const cartContext = createContext();
 export const ContextProvider = ({children}) => {
-  const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"))
+  const cartFromLocalStorage = localStorage.getItem('cart')
   const [cart, setCart] = useState([]);
  
 
@@ -14,6 +14,7 @@ export const ContextProvider = ({children}) => {
 const addItem = (Item, quantity) => {
   if(isInCart(Item.id)) {console.log('ya se encuentra en el carro')} 
   else{setCart([...cart,{Item, quantity}])}
+  
 }
 
 const removeItem = (id) => {
