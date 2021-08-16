@@ -29,6 +29,7 @@ const CashOut = () => {
    date: firebase.firestore.Timestamp.fromDate(new Date()),
    total: total
   };
+  
   const handleSubmit = (e) => {
    e.preventDefault();
    setLoading(true);

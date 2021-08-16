@@ -11,7 +11,7 @@ export default function Cart() {
   return  <div>
           <h2>No hay productos en el carro...</h2>
           <br/>
-        <Link to="/"> <button>Ver los productos disponibles</button></Link> 
+        <Link to="/"> <Button variant="primary">Ver los productos disponibles</Button></Link> 
           </div>
  }
   

@@ -1,8 +1,9 @@
 import React, { useState, useContext} from 'react';
-import Card from 'react-bootstrap/Card';
+import {Card, Button} from 'react-bootstrap';
 import ItemCount from './itemCount';
 import { cartContext } from "./Context";
 import { Link } from 'react-router-dom';
+
 
 
 
@@ -24,7 +25,7 @@ function ItemDetail({items}) {
      {items.description}
      </Card.Text>
       price: $ {items.price}
-      {state === false ?  <ItemCount initial={1} stock={10} onAdd={onAdd}/> :  <Link to='/Cart'><button onClick={() => setState(false)}>terminar mi compra</button></Link>}
+      {state === false ?  <ItemCount initial={1} stock={10} onAdd={onAdd}/> :  <Link to='/Cart'><Button onClick={() => setState(false)}>terminar mi compra</Button></Link>}
    </Card.Body>
   </Card>
   )
