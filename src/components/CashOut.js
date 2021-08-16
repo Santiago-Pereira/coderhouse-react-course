@@ -4,6 +4,8 @@ import firebase from "firebase/app";
 import 'firebase/firestore';
 import {getFirestore} from '../firebase';
 import { cartContext } from "./Context";
+import swal from 'sweetalert';
+import { Link } from 'react-router-dom';
 
 const CashOut = () => {
  const {clear, cart} = useContext(cartContext);
@@ -31,10 +33,12 @@ const CashOut = () => {
    e.preventDefault();
    setLoading(true);
   orders.add(newOrder).then(({id}) =>{
-   
    setOrderId(id);
-   alert('Gracias por elegirnos! \n Su numero de orden es:')
+   swal("Tu compra ha sido confirmada","Gracias por elegirnos " ,"success");
    clear(cart); 
+   setTimeout(function() {
+    window.location.replace('/');
+  }, 5000);
   }).catch(err => {
    setError(err);
   }).finally(() => {

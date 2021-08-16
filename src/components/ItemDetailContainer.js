@@ -8,7 +8,7 @@ import {getFirestore} from '../firebase';
 
 
 function ItemDetailContainer() {
-    const [items, setItems] = useState({})  // Le cambié [] por {}
+    const [items, setItems] = useState({})  
     const [loading, setLoading] = useState(false);
     const {id} = useParams();
       useEffect(() => {
@@ -17,12 +17,12 @@ function ItemDetailContainer() {
         const itemCollection = db.collection("muebles");
         const item = itemCollection.doc(id);
         item.get().then((doc) => {
-            if (!doc.exists){  // Le saqué el signo de exclamación
+            if (!doc.exists){  
                 console.log('Este producto no existe');
                 return;
             }
             console.log('producto encontrado!');
-            setItems({id: doc.id, ...doc.data()});  // Le borré el [0]
+            setItems({id: doc.id, ...doc.data()});  
         }).catch(( error) => {
             console.log('error al encontrar el producto', error);
         }).finally(() =>{
@@ -35,20 +35,6 @@ function ItemDetailContainer() {
         <div> <ItemDetail items={items}/> </div>
         ) 
 		}
- /* const [ProductDetails, setProductDetails] = useState({})
- const {id} = useParams();
-
-
-useEffect(() => {
- new Promise ((resolve, reject) => {
-      setTimeout(() => resolve (productos), 2000)
-}).then((productos) => productos.filter(element => element.id === id ? setProductDetails(element) : console.log('producto no encontrado')))
-}, [id])
-
-return(
-<div> <ItemDetail ProductDetails={ProductDetails}/> </div>
-) */
-
 
 
 export default ItemDetailContainer;
