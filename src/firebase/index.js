@@ -11,7 +11,7 @@ import 'firebase/firestore';
 };
 
 const app = firebase.initializeApp(firebaseConfig);
-const init ='';
+
 
 export function getFirebase(){
  return app;
